@@ -4,7 +4,10 @@
 
 Code from: [Processing IoT realtime data - Medium](https://medium.com/@iamvsouza/processing-grandparents-realtime-data-d6b8c99e0b43)
 
-![](header.png)
+<p align="center">
+  <img src="header.jpg" />
+</p>
+
 
 ## Usage example
 
