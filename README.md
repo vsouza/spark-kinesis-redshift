@@ -1,6 +1,8 @@
 # Apache Spark Kinesis Consumer
 
-> Example project for consuming AWS Kinesis streamming with Apache Spark
+> Example project for consuming AWS Kinesis streamming and save data on Amazon Redshift using Apache Spark
+
+Code from: [Processing IoT realtime data - Medium](https://medium.com/@iamvsouza/processing-grandparents-realtime-data-d6b8c99e0b43)
 
 ![](header.png)
 
