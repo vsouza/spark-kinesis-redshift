@@ -36,17 +36,20 @@ if __name__ == "__main__":
             sqlContext = getSqlContextInstance(rdd.context)
             schema = StructType([
                 StructField('user_id', StringType(), True),
-                StructField('device_id', StringType(), True),
-                StructField('steps', IntegerType(), True),
-                StructField('heartbeat', IntegerType(), True),
-                StructField('temperature', FloatType(), True),
-                StructField('battery_level', IntegerType(), True),
-                StructField('calories_spent', IntegerType(), True),
-                StructField('distance', FloatType(), True),
-                StructField('current_time', IntegerType(), True),
-                StructField('bcc', IntegerType(), True)
+                StructField('username', StringType(), True),
+                StructField('first_name', IntegerType(), True),
+                StructField('surname', IntegerType(), True),
+                StructField('age', FloatType(), True),
             ])
-            # df
+            df = sqlContext.createDataFrame(rdd, schema)
+            df.registerTempTable("activity_log")
+            df.write \
+                .format("com.databricks.spark.redshift") \
+                .option("url", "jdbc:redshiftURL.com:5439/database?user=USERNAME&password=PASSWORD") \
+                .option("dbtable", "activity_log") \
+                .option("tempdir", "s3n://spark-temp-data/") \
+                .mode("append") \
+                .save()
         except Exception as e:
             print(e)
             pass
