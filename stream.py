@@ -35,11 +35,11 @@ if __name__ == "__main__":
 
             sqlContext = getSqlContextInstance(rdd.context)
             schema = StructType([
-                StructField('user_id', StringType(), True),
+                StructField('user_id', IntegerType(), True),
                 StructField('username', StringType(), True),
-                StructField('first_name', IntegerType(), True),
-                StructField('surname', IntegerType(), True),
-                StructField('age', FloatType(), True),
+                StructField('first_name', StringType(), True),
+                StructField('surname', StringType(), True),
+                StructField('age', IntegerType(), True),
             ])
             df = sqlContext.createDataFrame(rdd, schema)
             df.registerTempTable("activity_log")
