@@ -35,7 +35,7 @@ this image, or run [Kinesalite]() directly.
 
 `docker run -d -p 4567:4567 vsouza/kinesis-local -p 4567 --createStreaMs 5`
 
-see the [project](https://github.com/vsouza/docker-Kinesis-local)
+check the [project](https://github.com/vsouza/docker-Kinesis-local)
 
 __I should have DynamoDB too?__
 
