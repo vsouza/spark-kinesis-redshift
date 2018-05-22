@@ -42,7 +42,7 @@ __I should have DynamoDB too?__
 Yes, :cry: . The AWS SDK Kinesis module make checkpoints of your Kinesis tunnel, and store this on DynamoDB. You don't
 need to create tables or else, the SDK will create for you. 
 
-*Remeber to configure your  throughput of DynamoDB correctly*
+*Remember to configure your throughput value in DynamoDB correctly*
 
 ## License
 
